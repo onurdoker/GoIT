@@ -1,0 +1,162 @@
+h1 {
+  color: orange;
+}
+
+p {
+  color: cyan;
+}
+
+a {
+  color: #ffc107;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  color: #212121;
+  font-size: 14px;
+  background-color: #fafafa;
+  line-height: 1.5;
+}
+
+header {
+  background-color: #f5f5f5;
+}
+
+nav {
+  background-color: rgba(0, 0, 255, 0.3);
+}
+
+h1 {
+  color: #f44336;
+}
+
+h2 {
+  color: #3f51b5;
+}
+
+h3 {
+  color: #4caf50;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Oswald", sans-serif;
+}
+
+ul {
+  list-style-type: none;
+}
+
+#hero {
+  color: #3f51b5;
+}
+
+#clubs {
+  color: #9c27b0;
+}
+
+#benefits {
+  color: #00bcd4;
+}
+
+#programs {
+  color: #ff9800;
+}
+
+.page-header {
+  background-color: #bdbdbd;
+}
+
+.page-nav .link {
+  color: #00bcd4;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 14px;
+}
+
+.page-nav .link:hover,
+.page-nav .link:focus {
+  color: #18ffff;
+}
+
+.page-nav .link:active {
+  color: #212121;
+}
+
+.page-title {
+  color: #f44336;
+  font-size: 24px;
+  font-weight: 500;
+  font-style: italic;
+  text-align: center;
+  line-height: 1.333;
+  letter-spacing: 3px;
+  text-shadow: 2px 2px 4px #212121;
+}
+
+.section-title {
+  color: #3f51b5;
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 1.333;
+  letter-spacing: 1px;
+}
+
+.section-text {
+  color: #ff5722;
+  line-height: 1.5;
+  text-indent: 24px;
+}
+
+.page-footer {
+  background-color: #212121;
+}
+
+.copyright-text {
+  color: #ffffff;
+}
+
+.club-list .title {
+  color: #4caf50;
+  font-size: 16px;
+  text-align: center;
+  line-height: 1.333;
+}
+
+.club-list .text {
+  color: #009688;
+}
+
+.club-list .link {
+  color: #ffc107;
+  font-size: 14px;
+  font-weight: 500;
+  text-decoration: none;
+}
+
+.club-list .link:hover,
+.club-list .link:focus {
+  color: #f57f17;
+  text-decoration: underline;
+}
+
+.club-list .link:active {
+  color: #ff1744;
+}
+
+.downloads .plan-name {
+  color: #ff1744;
+}
+
+.downloads .link {
+  text-decoration: none;
+}
+
+.downloads .link:hover,
+.downloads .link:focus {
+  text-decoration: underline;
+}

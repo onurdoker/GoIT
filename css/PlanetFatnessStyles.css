@@ -1,41 +1,29 @@
-h1 {
-  color: orange;
-}
-
-p {
-  color: cyan;
-}
-
-a {
-  color: #ffc107;
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
 }
 
 body {
+  margin: 0;
   font-family: "Poppins", sans-serif;
   color: #212121;
   font-size: 14px;
-  background-color: #fafafa;
+  background-color: #ffffff;
   line-height: 1.5;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
-header {
-  background-color: #f5f5f5;
+.product-table td, .product-table th {
+    padding: 4px 8px;
+    border: 1px solid #212121;
 }
 
-nav {
-  background-color: rgba(0, 0, 255, 0.3);
-}
 
-h1 {
-  color: #f44336;
-}
-
-h2 {
-  color: #3f51b5;
-}
-
-h3 {
-  color: #4caf50;
+main {
+  flex-grow: 1;
 }
 
 h1,
@@ -44,119 +32,191 @@ h3,
 h4,
 h5,
 h6 {
+  margin: 0;
   font-family: "Oswald", sans-serif;
 }
 
+p {
+  margin: 0;
+}
+
 ul {
+  margin: 0;
+  padding: 0;
   list-style-type: none;
 }
 
-#hero {
-  color: #3f51b5;
+img {
+  display: block;
+  max-width: 100%;
+  object-fit: cover;
 }
 
-#clubs {
-  color: #9c27b0;
-}
-
-#benefits {
-  color: #00bcd4;
-}
-
-#programs {
-  color: #ff9800;
+.container {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 0 16px;
 }
 
 .page-header {
-  background-color: #bdbdbd;
+  margin-bottom: 20px;
+  padding-top: 16px;
+  padding-bottom: 16px;
+  background-color: #e0e0e0;
+}
+
+.page-header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.page-nav {
+  display: flex;
+  gap: 8px;
 }
 
 .page-nav .link {
-  color: #00bcd4;
+  display: block;
+  padding: 4px 8px;
+  color: #03a9f4;
   text-decoration: none;
-  text-transform: uppercase;
   font-size: 14px;
+  text-transform: uppercase;
 }
 
 .page-nav .link:hover,
 .page-nav .link:focus {
-  color: #18ffff;
+  color: #0288d1;
 }
 
 .page-nav .link:active {
-  color: #212121;
+  color: #f44336;
 }
 
 .page-title {
-  color: #f44336;
-  font-size: 24px;
-  font-weight: 500;
-  font-style: italic;
+  margin-bottom: 24px;
+  font-size: 32px;
   text-align: center;
   line-height: 1.333;
   letter-spacing: 3px;
-  text-shadow: 2px 2px 4px #212121;
+}
+
+.section {
+  margin-top: 40px;
+  padding-top: 20px;
+  border-top: 2px dashed #212121;
 }
 
 .section-title {
-  color: #3f51b5;
+  margin-bottom: 20px;
   font-size: 20px;
   font-weight: 500;
+  text-align: center;
   line-height: 1.333;
   letter-spacing: 1px;
 }
 
-.section-text {
-  color: #ff5722;
-  line-height: 1.5;
-  text-indent: 24px;
+.club-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
 }
 
-.page-footer {
-  background-color: #212121;
-}
-
-.copyright-text {
-  color: #ffffff;
+.club-list .item {
+  flex-basis: calc((100% - 24px) / 3);
+  border-radius: 8px;
+  overflow: hidden;
 }
 
 .club-list .title {
-  color: #4caf50;
+  margin-bottom: 8px;
   font-size: 16px;
-  text-align: center;
+  text-transform: uppercase;
   line-height: 1.333;
 }
 
-.club-list .text {
-  color: #009688;
-}
-
 .club-list .link {
-  color: #ffc107;
-  font-size: 14px;
+  color: #03a9f4;
   font-weight: 500;
+  font-size: 14px;
   text-decoration: none;
 }
 
 .club-list .link:hover,
 .club-list .link:focus {
-  color: #f57f17;
-  text-decoration: underline;
+  color: #0288d1;
 }
 
 .club-list .link:active {
-  color: #ff1744;
-}
-
-.downloads .plan-name {
-  color: #ff1744;
+  color: #f44336;
 }
 
 .downloads .link {
+  color: #03a9f4;
   text-decoration: none;
+}
+
+.downloads {
+  margin-top: 20px;
+}
+
+.downloads .item:not(:last-child) {
+  margin-bottom: 8px;
 }
 
 .downloads .link:hover,
 .downloads .link:focus {
+  color: #0288d1;
   text-decoration: underline;
+}
+
+.downloads .link:active {
+  color: #f44336;
+}
+
+.page-footer {
+  margin-top: 20px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  background-color: #212121;
+}
+
+.page-footer .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.copyright-text {
+  color: #ffffff;
+  flex-basis: 300px;
+}
+
+.social-links {
+  display: flex;
+  gap: 8px;
+}
+
+.benefits {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin-top: 20px;
+  margin-bottom: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.benefits .item {
+  flex-basis: calc((100% - 32px) / 3);
+}
+
+
+
+.social-links {
+  display: flex;
+  flex-shrink: 0;
+  gap: 8px;
+  align-self: flex-end;
 }

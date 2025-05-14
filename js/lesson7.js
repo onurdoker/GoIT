@@ -93,11 +93,11 @@ const book = {
 //   console.log(book.key); // undefined
 // }
 
-// const apartment = {
-//     descr: 'Spacóus apartment in the city center',
-//     rating: 4,
-//     proce: 2153,
-// }
+const apartment = {
+    descr: 'Spacóus apartment in the city center',
+    rating: 4,
+    proce: 2153,
+}
 
 // const keys = [];
 // const values = [];
@@ -123,3 +123,14 @@ const book = {
 // for (const value of values) {
 //     console.log(typeof value);
 // }
+
+// const values = [];
+// const keys = Object.keys(apartment);
+
+// for (const key of keys) {
+//     values.push(apartment[key]);
+// }
+// console.log(values);
+
+// const values2 = Object.values(apartment);
+// console.log(values2);

@@ -1,0 +1,43 @@
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+
+body {
+    padding: 20px;
+    font-family: raleway, sans-serif;
+}
+
+h3 {
+    font-size: 50px;
+    color: darkgreen;
+}
+
+
+.p2 {
+    color: blue;
+    font-size: 30px;
+}
+
+.h-header {
+    font-size: 42px;
+    font-style: italic;
+}
+
+.second {
+    color: green;
+}
+
+#identical {
+    color: lightblue;
+}
+
+.identical {
+    color: red;
+}
+
+.bold-text {
+    font-weight: 900;
+}
+
+h3 {
+    font-size: 14px;
+    font-weight: 500;
+}

@@ -97,25 +97,26 @@
 
 
 // reduce method
-// const numbers = [3, 6, 8, 4, 3, 9]
 // accumulator
+// const numbers = [3, 6, 8, 4, 3, 9]
 // const total = numbers.reduce((acc, number) => {
-// 	return acc + number
-// }, 0)
+// 	console.log(acc, number);
+// 	return acc * number
+// })
 // console.log(total)
 
-const scores = [61, 19, 74, 35, 92, 56];
-const ascendingScores = scores.toSorted((a, b) => a.localeCompare(b));
-console.log(ascendingScores);
+// const scores = [61, 19, 74, 35, 92, 56];
+// const ascendingScores = scores.toSorted((a, b) => a.localeCompare(b));
+// console.log(ascendingScores);
 
 
-const lettes = ['a', 'b', 'c', 'd', 'e', 'f', 'A', 'B', 'C', 'D', 'E', 'F'];
-const uppercaseLetters = lettes.toSorted((a, b) => a.localeCompare(b));
+// const lettes = ['a', 'b', 'c', 'd', 'e', 'f', 'A', 'B', 'C', 'D', 'E', 'F'];
+// const uppercaseLetters = lettes.toSorted((a, b) => a.localeCompare(b));
 // [
 //   'a', 'A', 'b', 'B',
 //   'c', 'C', 'd', 'D',
 //   'e', 'E', 'f', 'F'
 // ]
 
-console.log(uppercaseLetters);
-console.log("a".localeCompare("A"))
+// console.log(uppercaseLetters);
+// console.log("a".localeCompare("A"))

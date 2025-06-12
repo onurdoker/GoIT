@@ -59,12 +59,12 @@
 
 // list.innerHTML = myNewHTML;
 
-const technologies = ['HTML', 'CSS', 'JavaScript', 'React'];
-const list = document.querySelector('.list');
+// const technologies = ['HTML', 'CSS', 'JavaScript', 'React'];
+// const list = document.querySelector('.list');
 
-cont markup = technologies
-.map((technology)  => `<li class='list-item'>${technology}</li>` )
-.join('');
+// const markup = technologies
+// 	.map((technology) => `<li class="list-item">${technology}</li>`)
+// 	.join('');
 
 // Adding all the markup in on operation
-list.innerHTML = markup;
+// list.innerHTML = markup;

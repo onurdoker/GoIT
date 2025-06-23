@@ -1,0 +1,59 @@
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root {
+    --primary-color: #ff6ccc;
+    --secondary-color: #0000ff;
+}
+
+body {
+    font-family: Roboto, sans-serif;
+}
+
+.hero {
+    color: var(--primary-color);
+    background-color: #2e2f42;
+    text-align: justify;
+}
+
+.second {
+    font-size: 32px;
+}
+
+.contact-section {
+    color: var(--secondary-color);
+    letter-spacing: 0.02em;
+    line-height: 50px;
+}
+
+.about-section {
+    color: var(--primary-color);
+}
+
+.adres-container {
+    font-style: normal;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.kare {
+    width: 400px;
+    height: 400px;
+    background-color: red;
+    border: 10px solid blue;
+    border-radius: 500px;
+}
+
+button {
+    background-color: blue;
+    border: none;
+    color: white;
+}
+
+button:hover, button:focus {
+    background-color: green;
+    width: 200px;
+    height: 200px;
+}

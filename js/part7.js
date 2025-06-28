@@ -175,29 +175,60 @@
 // 	console.log('keyups: ', event);
 // })
 
-const registerForm = document.querySelector('.form');
-registerForm.addEventListener('submit', handleSubmit);
+// const registerForm = document.querySelector('.form');
+// registerForm.addEventListener('submit', handleSubmit);
 
-function handleSubmit(event) {
-	event.preventDefault();
-	// const form = event.target;
-	// const login = form.elements.login.value;
-	const login = event.target.elements.login.value;
-	// const password = form.elements.password.value;
-	const password = event.target.elements.password.value;
+// function handleSubmit(event) {
+// 	event.preventDefault();
+// 	// const form = event.target;
+// 	// const login = form.elements.login.value;
+// 	const login = event.target.elements.login.value;
+// 	// const password = form.elements.password.value;
+// 	const password = event.target.elements.password.value;
+//
+// 	if (login === '' || password === '') {
+// 		return console.log('Please fill in all the fields');
+// 	}
+//
+// 	console.log(`login: ${login}, Password: ${password}`);
+// 	form.reset();
+// }
 
-	if (login === '' || password === '') {
-		return console.log('Please fill in all the fields');
-	}
-	;
+// const select = document.querySelector('.pizza-select');
+// const textOutput = document.querySelector('.text-output');
+// const valueOutput = document.querySelector('.value-output');
 
-	console.log(`login: ${login}, Password: ${password}`);
-	form.reset();
+// select.addEventListener('change', setOutput);
 
-}
+// function setOutput(event) {
+// 	const selectOptionValue = event.currentTarget.value;
+// 	const selectedOptionIndex = event.currentTarget.selectedIndex;
+// 	const selectedOptionText = event.currentTarget.options[selectedOptionIndex].text;
+// 	textOutput.textContent = selectedOptionText;
+// 	valueOutput.textContent = selectOptionValue;
+// }
 
+// const textInput = document.querySelector('.text-input');
+// const output = document.querySelector('.output');
+// textinput.addEventListener('input', (event) => {
+// 	output.textContent = event.currentTarget.value;
+// });
 
+const textInput = document.querySelector('.text-input')
+const setFocusBtn = document.querySelector('[data-action="set"]');
+const removeFocusBtn = document.querySelector('[data-action="remove"]');
 
+setFocusBtn.addEventListener('click', () => {
+	textInput.focus();
+});
+
+removeFocusBtn.addEventListener('focus', () => {
+	textInput.value = 'This input has focus';
+});
+
+textInput.addEventListener('blur', () => {
+	textinput.value = "";
+});
 
 
 

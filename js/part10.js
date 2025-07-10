@@ -94,43 +94,149 @@
 
 // Getter and Setter
 
-const date = new Date("March 16, 2030 14:25:00");
-console.log("Date: ", date); // "Sat Mar 16 2030 14:25:00 GMT+0200"
+// const date = new Date("March 16, 2030 14:25:00");
+// console.log("Date: ", date); // "Sat Mar 16 2030 14:25:00 GMT+0200"
 
 // 1 ile 31 arasında günü döndürür
-console.log("Day: ", date.getDate()); // 16
+// console.log("Day: ", date.getDate()); // 16
 
 // 0 ile 6 arasında haftanın gününü döndürür, Pazar 0'dır
-console.log("Day of the week: ", date.getDay()); // 6
+// console.log("Day of the week: ", date.getDay()); // 6
 
 // 0 ile 11 arasında ayı döndürür
-console.log("Month: ", date.getMonth()); // 2
+// console.log("Month: ", date.getMonth()); // 2
 
 // 4 haneli yılı döndürür
-console.log("Full year: ", date.getFullYear()); // 2030
+// console.log("Full year: ", date.getFullYear()); // 2030
 
 // Saati döndürür
-console.log("Hours: ", date.getHours()); // 14
+// console.log("Hours: ", date.getHours()); // 14
 
 // Dakikaları döndürür
-console.log("Minutes: ", date.getMinutes()); // 25
+// console.log("Minutes: ", date.getMinutes()); // 25
 
 // Saniyeleri döndürür
-console.log("Seconds: ", date.getSeconds()); // 0
+// console.log("Seconds: ", date.getSeconds()); // 0
 
 // Milisaniyeleri döndürür
-console.log("Milliseconds: ", date.getMilliseconds()); // 0
+// console.log("Milliseconds: ", date.getMilliseconds()); // 0
 
-const date2 = new Date("March 16, 2030 14:25:00");
+// const date2 = new Date("March 16, 2030 14:25:00");
 
-date2.setMinutes(50);
-console.log(date2); // "Sat Mar 16 2030 14:50:00 GMT+0200"
+// date2.setMinutes(50);
+// console.log(date2); // "Sat Mar 16 2030 14:50:00 GMT+0200"
 
-date2.setFullYear(2040);
-console.log(date2); // "Fri Mar 16 2040 14:50:00 GMT+0200"
+// date2.setFullYear(2040);
+// console.log(date2); // "Fri Mar 16 2040 14:50:00 GMT+0200"
 
-date2.setMonth(4);
-console.log(date2); // "Wed May16 2040 14:50:00 GMT+0300"
+// date2.setMonth(4);
+// console.log(date2); // "Wed May16 2040 14:50:00 GMT+0300"
+
+
+// Promise
+// Pending
+
+// Fulfilled - Reject  => Settled
+
+// const isSuccess = true;
+
+// const promise = new Promise((resolve, reject) => {
+// 	setTimeout(() => {
+// 		if (isSuccess) {
+// 			resolve('Success! Value passed to resolve function');
+// 		} else {
+// 			reject('Error! Error passed to reject function');
+// 		}
+// 	}, 2000)
+// });
+// console.log(promise);
+// promise
+// 	.then((value) => {
+// 		console.log(value);
+// 	})
+// 	.catch((error) => {
+// 		console.log(error);
+// 	})
+// 	.finally(() => {
+// 		console.log('promise is settled');
+// 	})
+
+// const promise = new Promise((resolve, reject) => {
+// 	setTimeout(() => {
+// 		resolve(5);
+// 	}, 2000);
+// });
+
+// promise
+// 	.then(value => {
+// 		console.log(value);
+// 		return value * 2;
+// 	})
+// 	.then(value => {
+// 		console.log(value);
+// 		return value * 3;
+// 	})
+// 	.then(value => {
+// 		console.log(value);
+// 		return value * 4;
+// 	})
+// 	.catch(error => {
+// 		console.log(error)
+// 	})
+// 	.finally(() => {
+// 		console.log('Finished...');
+// 	});
+
+
+// const fencthUserFromServer = (username, onSuccess, onError) => {
+// 	console.log(`Fetching data for: ${username}`);
+// };
+
+// fencthUserFromServer(
+// 	"mango",
+// 	user => console.log(user),
+// 	error => console.log(error)
+// );
+
+// const fetchUserFromServer = (username, onSuccess, onError) => {
+// 	console.log(`Fetching data for ${username}`);
+// 	setTimeout(() => {
+// 		const isSuccess = false;
+//
+// 		if (isSuccess) {
+// 			onSuccess('Success value');
+// 		} else {
+// 			onError('Error');
+// 		}
+// 	}, 2000);
+// }
+
+// fetchUserFromServer(
+// 	'mango',
+// 	user => console.log(user),
+// 	error => console.log(error)
+// );
+
+
+// Promisification
+// const fetchUserFromServer = username => {
+// 	return new Promise((resolve, reject) => {
+// 		console.log(`Fetching data for ${username}`);
+// 		setTimeout(() => {
+// 			const isSuccess = false;
+// 			if (isSuccess) {
+// 				resolve('Success value');
+// 			} else {
+// 				reject('Error');
+// 			}
+// 		}, 2000);
+// 	});
+// }
+
+// fetchUserFromServer('Mango')
+// 	.then(user => console.log(user))
+// 	.catch(error => console.log(error));
+
 
 
 

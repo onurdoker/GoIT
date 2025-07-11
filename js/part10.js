@@ -45,14 +45,12 @@
 // 	console.log(`Timeout with id ${timeoutId} has stopped`);
 // });
 
-
 // const startBtn = document.querySelector(".start-btn");
 // startBtn.addEventListener('click', () => {
 // 	const intervalId = setInterval(() => {
 // 		console.log(`Interval ID: ${intervalId}, ${Math.random()}`);
 // 	}, 1000);
 // })
-
 
 // Date and time
 
@@ -90,7 +88,6 @@
 // const endTime = Date.now()
 // const elapsedTime = endTime - startTime
 // console.log(`Elapsed time: ${elapsedTime} ms`)
-
 
 // Getter and Setter
 
@@ -131,7 +128,6 @@
 
 // date2.setMonth(4);
 // console.log(date2); // "Wed May16 2040 14:50:00 GMT+0300"
-
 
 // Promise
 // Pending
@@ -187,7 +183,6 @@
 // 		console.log('Finished...');
 // 	});
 
-
 // const fencthUserFromServer = (username, onSuccess, onError) => {
 // 	console.log(`Fetching data for: ${username}`);
 // };
@@ -217,7 +212,6 @@
 // 	error => console.log(error)
 // );
 
-
 // Promisification
 // const fetchUserFromServer = username => {
 // 	return new Promise((resolve, reject) => {
@@ -236,6 +230,85 @@
 // fetchUserFromServer('Mango')
 // 	.then(user => console.log(user))
 // 	.catch(error => console.log(error));
+
+// new Promise(resolve => resolve('success value'));
+// Promise.resolve("success value");
+
+// new Promise((resolve, reject) => reject('error'));
+// Promise.reject('error');
+
+// const makeGreeting = (guestName, onSuccess, onError) => {
+// 	if (!guestName) {
+// 		onError('Guest name must not be empty');
+// 	} else {
+// 		onSuccess(`Welcome ${guestName}`);
+// 	}
+// };
+// makeGreeting(
+// 	'Mango - Greeting1',
+// 	greeting => console.log(greeting),
+// 	error => console.log(error)
+// );
+
+// const makeGreeting2 = guestName => {
+// 	return new Promise((resolve, reject) => {
+// 		if (!guestName) {
+// 			reject('Guest name must not be empty');
+// 		} else {
+// 			resolve(`Welcome ${guestName}`);
+// 		}
+// 	})
+// }
+// makeGreeting2('mango2 - Greeting2')
+// 	.then(greeting => console.log(greeting))
+// 	.catch(error => console.log(error));
+
+
+// const makeGreeting3 = guestName => {
+// 	if (!guestName) {
+// 		return Promise.reject('Guest name must not be empty');
+// 	} else {
+// 		return Promise.resolve(`Welcome ${guestName}`);
+// 	}
+// }
+// makeGreeting3('mango3 - Greeting3')
+// 	.then(greeting => console.log(greeting))
+// 	.catch(error => console.log(error));
+
+// multi promise handling
+
+// Promise all
+// const p1 = Promise.resolve(12);
+// const p2 = Promise.reject(23);
+// const p3 = Promise.resolve(45);
+
+// Promise.all([p1, p2, p3])
+// 	.then(result => {
+// 		console.log(result);
+// 	})
+// 	.catch(error => {
+// 		console.log(error)
+// 	});
+
+// Promise.allSettled()
+// Promise.allSettled([p1, p2, p3])
+// 	.then(result => {
+// 		console.log(result);
+// 	})
+
+const p1 = new Promise((resolve, reject) => {
+	setTimeout(() => resolve(1), 3000);
+});
+const p2 = new Promise((resolve, reject) => {
+	setTimeout(() => reject(2), 2000);
+})
+
+Promise.race([p1, p2])
+	.then(value => console.log(value))
+	.catch(error => console.log(error));
+
+
+
 
 
 
